@@ -2,20 +2,20 @@
 import { StyledStaticticsItem, StyledStatisticsList, StyledStatisticsSpan } from "./Statistics.styled"
 import PropTypes from 'prop-types';
 
-export const Statistics = ({ good, neutral, bad, total, positive }) => {
+export const Statistics = ({ goodItem, neutralItem, badItem, total, positive }) => {
     return (
         <StyledStatisticsList>
             <StyledStaticticsItem>
                 <StyledStatisticsSpan>Good:   </StyledStatisticsSpan> 
-                {good}
+                {goodItem}
             </StyledStaticticsItem>
             <StyledStaticticsItem>
                 <StyledStatisticsSpan>Neutral:   </StyledStatisticsSpan> 
-                {neutral}
+                {neutralItem}
             </StyledStaticticsItem>
             <StyledStaticticsItem>
                 <StyledStatisticsSpan>Bad:   </StyledStatisticsSpan> 
-                {bad}
+                {badItem}
             </StyledStaticticsItem>
             <StyledStaticticsItem>
                 <StyledStatisticsSpan>Total:   </StyledStatisticsSpan> 
@@ -30,9 +30,9 @@ export const Statistics = ({ good, neutral, bad, total, positive }) => {
 }
 
 Statistics.propTypes = {
-    good: PropTypes.number.isRequired,
-    neutral: PropTypes.number.isRequired,
-    bad: PropTypes.number.isRequired,
+    goodItem: PropTypes.number.isRequired,
+    neutralItem: PropTypes.number.isRequired,
+    badItem: PropTypes.number.isRequired,
     total: PropTypes.number.isRequired,
     positive: PropTypes.number.isRequired
 }

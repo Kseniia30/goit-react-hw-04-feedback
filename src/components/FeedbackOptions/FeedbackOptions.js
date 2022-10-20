@@ -5,9 +5,8 @@ export const FeedbackOptions = ({options, onLeaveFeedback}) => {
     return options.map(option => (
             <StyledBtnItem key={option}>
                 <StyledBTN
-                    key={option}
                     type="button"
-                    onClick={() => onLeaveFeedback(option)}>{option}
+                    onClick={onLeaveFeedback}>{option}
                 </StyledBTN>
             </StyledBtnItem>
             
